@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: white;
+}
+
+body {
+    background: black;
+    color:white;
+    height: 100vh;
+    align-content: center;
+    
+}
+
+
+h1{
+    text-transform: uppercase;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 500;
+    font-size: 5rem;
+    text-align: center;
+}
+
+button{
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    padding: 0.5rem 2rem;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.start,.endGame{
+    border: 2px dashed white;
+    width: fit-content;
+    padding: 2.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.game{
+    display: none;
+    flex-direction: column;
+    height: 100%;
+}
+
+.statsBar{
+    border:1px solid white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.box.square{
+    height: 2rem;
+    width: 2rem;
+    background-color: red;
+    border:2px solid white;
+    position: absolute;
+    }   
+
+
+.gameScreen{
+    position: relative;
+    height:max-content;
+    flex: 1;
+}
+
+.endGame{
+    /* border: 2px solid red; */
+    display: none;
+}
+
+/* Add this to your style.css file */
+
+/* Smooth transition for the box when caught */
+.box {
+    transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+}
+
+/* Explosion particle styles */
+.explosion-particle {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    transition: none;
+}
+
+/* Explosion fragment styles */
+.explosion-fragment {
+    transition: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure fragments inherit shape properties */
+.explosion-fragment.square {
+    /* Inherits from .box.square styles */
+}
+
+/* Optional: Add more dramatic effect on click */
+.box:active {
+    transform: scale(1.1);
+}

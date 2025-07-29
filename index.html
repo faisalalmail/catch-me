@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Catch me</title>
+</head>
+<body>
+    <div class="start" id="start">
+        <h1>Catch me!</h1>
+        <!-- <p>Click the button below to start the game</p> -->
+        <button id="startButton">Start Game</button>
+    </div>
+    <div class="game" id="game">
+        <div class="statsBar">
+            
+            <p>Score: <span id="scoreDisplay">0</span></p>
+            <p><span id="timeDisplay">0.00</span></p>
+            <p>Lives: <span id="livesDisplay">0</span></p>
+            
+        </div>
+        <div class="gameScreen"><div id="box" class="box square" onclick="caught()"></div></div>
+
+        
+        
+        </div>
+        <div class="endGame" id="endGame">
+            <div class="endgame-stats">
+                <h2>Game Over</h2>
+                <p>Score:<span id="endGameScore">0</span></p>
+                <button onclick="location.reload()">Play Again!</button>
+            </div>
+        </div>
+</body>
+</html>
